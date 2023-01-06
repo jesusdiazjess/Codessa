@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+// Function that increments a static variable and returns its value
+int incrementCounter() {
+  static int counter = 0;  // Declare a static variable and initialize it to 0
+  counter++;  // Increment the value of the static variable
+  return counter;  // Return the value of the static variable
+}
+
+int main() {
+  // Call the function multiple times and print the results
+  printf("Counter: %d\n", incrementCounter());
+  printf("Counter: %d\n", incrementCounter());
+  printf("Counter: %d\n", incrementCounter());
+
+  return 0;
+}
