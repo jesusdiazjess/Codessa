@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+  int num_elements = 10;  // Number of elements in the array
+  int elements[num_elements] = {2, 3, 4, 1, 6, 5, 7, 8, 9, 10};  // Array of elements
+  int highest = elements[0];  // Variable to store the highest element
+  int second_last_smallest = elements[num_elements - 1];  // Variable to store the second last smallest element
+
+  // Find the highest element
+  for (int i = 1; i < num_elements; i++) {
+    if (elements[i] > highest) {
+      highest = elements[i];
+    }
+  }
+  printf("Highest element: %d\n", highest);
+
+  // Find the second last smallest element
+  for (int i = num_elements - 2; i >= 0; i--) {
+    if (elements[i] < second_last_smallest) {
+      second_last_smallest = elements[i];
+    }
+  }
+  printf("Second last smallest element: %d\n", second_last_smallest);
+
+  return 0;
+}
