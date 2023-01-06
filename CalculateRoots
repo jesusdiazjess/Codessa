@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+// Function that calculates and displays the roots of a quadratic equation
+void CalculateRoots(double a, double b, double c) {
+  // Calculate the discriminant
+  double discriminant = b * b - 4 * a * c;
+
+  if (discriminant > 0) {  // Real roots
+    double root1 = (-b + sqrt(discriminant)) / (2 * a);
+    double root2 = (-b - sqrt(discriminant)) / (2 * a);
+    printf("The roots of the equation are: %.2f and %.2f\n", root1, root2);
+  } else if (discriminant == 0) {  // Equal roots
+    double root = -b / (2 * a);
+    printf("The roots of the equation are equal: %.2f\n", root);
+  } else {  // Complex roots
+    double real = -b / (2 * a);
+    double imag = sqrt(-discriminant) / (2 * a);
+    printf("The roots of the equation are complex: %.2f + %.2fi and %.2f - %.2fi\n", real, imag, real, imag);
+  }
+}
+
+int main() {
+  // Call the function with different coefficients
+  CalculateRoots(1, -3, 2);
+  CalculateRoots(1, 0, -4);
+  CalculateRoots(2, -8, 7);
+
+  return 0;
+}
