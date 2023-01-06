@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+  int numbers[10];  // Declare an array to store the numbers
+
+  // Read the numbers from the keyboard
+  printf("Enter 10 integers: \n");
+  for (int i = 0; i < 10; i++) {
+    scanf("%d", &numbers[i]);
+  }
+
+  // Display the numbers on the screen
+  printf("Entered numbers: \n");
+  for (int i = 0; i < 10; i++) {
+    printf("%d ", numbers[i]);
+  }
+  printf("\n");
+
+  return 0;
+}
