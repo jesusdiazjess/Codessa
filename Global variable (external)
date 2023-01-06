@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Declare a global variable
+int g_value = 0;
+
+// Function that increments the global variable
+void increment() {
+  g_value++;
+}
+
+int main() {
+  // Print the initial value of the global variable
+  printf("Initial value: %d\n", g_value);
+
+  // Call the function to increment the global variable
+  increment();
+
+  // Print the final value of the global variable
+  printf("Final value: %d\n", g_value);
+
+  return 0;
+}
