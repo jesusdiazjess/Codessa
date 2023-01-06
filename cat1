@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// Print a message
+void printMessage() {
+  printf("Hello!\n");
+}
+
+// Print a line of stars
+void printLine() {
+  for (int i = 0; i < 10; i++) {
+    printf("*");
+  }
+  printf("\n");
+}
+
+// Increment a global variable
+int counter = 0;
+void incrementCounter() {
+  counter++;
+}
+
+int main() {
+  // Call the functions
+  printMessage();
+  printLine();
+  incrementCounter();
+  printf("Counter: %d\n", counter);
+
+  return 0;
+}
