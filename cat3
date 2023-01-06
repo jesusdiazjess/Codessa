@@ -1,0 +1,16 @@
+#include <time.h>
+
+// Function with no arguments and a return value
+char* getCurrentDateTime() {
+  static char buffer[50];  // Buffer to store the date and time
+
+  // Get the current date and time
+  time_t now = time(NULL);
+  struct tm* tm_now = localtime(&now);
+
+  // Format the date and time
+  strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", tm_now);
+
+  // Return the date and time
+  return buffer;
+}
