@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+// Function that receives an integer by value
+void increment(int x) {
+  x++;  // Increment the value of x
+}
+
+int main() {
+  int a = 10;  // Declare an integer
+
+  printf("Before increment: a = %d\n", a);  // Print the original value
+
+  // Call the function and pass the integer as an argument
+  increment(a);
+
+  printf("After increment: a = %d\n", a);  // Print the value after the function call
+
+  return 0;
+}
