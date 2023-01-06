@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+// Recursive function that calculates the sum of the first n natural numbers
+int findsum(int n) {
+  if (n == 1) {  // Base case: the sum of the first natural number is 1
+    return 1;
+  } else {  // Recursive case: the sum of the first n natural numbers is n + the sum of the first (n - 1) natural numbers
+    return n + findsum(n - 1);
+  }
+}
+
+int main() {
+  // Call the function and print the result
+  printf("The sum of the first 10 natural numbers is: %d\n", findsum(10));
+
+  return 0;
+}
