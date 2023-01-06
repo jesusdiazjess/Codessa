@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Function that receives two integers by reference
+void swap(int* x, int* y) {
+  int temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+int main() {
+  int a = 10, b = 20;  // Declare two integers
+
+  printf("Before swap: a = %d, b = %d\n", a, b);  // Print the original values
+
+  // Call the function and pass the addresses of the integers as arguments
+  swap(&a, &b);
+
+  printf("After swap: a = %d, b = %d\n", a, b);  // Print the values after the function call
+
+  return 0;
+}
+c
