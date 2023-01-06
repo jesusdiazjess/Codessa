@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+  int num_students = 10;  // Number of students
+  int marks[num_students];  // Array to store the marks of the students
+  float sum = 0;  // Variable to store the sum of the marks
+  float average;  // Variable to store the average of the marks
+  float deviation;  // Variable to store the deviation from the average
+
+  // Read the marks of the students from the keyboard
+  printf("Enter the marks of %d students: \n", num_students);
+  for (int i = 0; i < num_students; i++) {
+    scanf("%d", &marks[i]);
+    sum += marks[i];  // Add the marks to the sum
+  }
+
+  // Calculate the average of the marks
+  average = sum / num_students;
+
+  // Calculate the deviation percentage from the average for each student
+  for (int i = 0; i < num_students; i++) {
+    deviation = (marks[i] - average) / average * 100;  // Calculate the deviation percentage
+    printf("Student %d: deviation = %.2f%%\n", i+1, deviation);
+  }
+
+  return 0;
+}
