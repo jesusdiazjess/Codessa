@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// Function that uses local variables
+void printNumbers(int n) {
+  // Declare a local variable
+  int i;
+
+  // Print the numbers from 1 to n
+  for (i = 1; i <= n; i++) {
+    printf("%d ", i);
+  }
+  printf("\n");
+}
+
+int main() {
+  // Call the function and pass a number as an argument
+  printNumbers(5);
+
+  // Call the function again with a different number
+  printNumbers(10);
+
+  return 0;
+}
