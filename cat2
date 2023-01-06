@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+// Function declaration
+void printData(int data, char* string);
+
+int main() {
+  // Call the function with different arguments
+  printData(5, "Hello");
+  printData(10, "World");
+
+  return 0;
+}
+
+// Function definition
+void printData(int data, char* string) {
+  printf("Data: %d, String: %s\n", data, string);
+}
