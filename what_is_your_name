@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function declaration
+char* what_is_your_name();
+
+int main() {
+  char* name;  // Variable to store the name
+
+  // Call the function and store the returned value in the variable
+  name = what_is_your_name();
+
+  // Print the name
+  printf("Your name is: %s\n", name);
+
+  return 0;
+}
+
+// Function definition
+char* what_is_your_name() {
+  static char buffer[50];  // Buffer to store the name
+
+  // Ask the user for their name
+  printf("What is your name?\n");
+  scanf("%s", buffer);
+
+  // Return the name
+  return buffer;
+}
