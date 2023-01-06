@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// Function prototype
+void printArray(int array[], int size);
+
+int main() {
+  int array[] = {1, 2, 3, 4, 5};  // Array to be passed to the function
+  int size = sizeof(array) / sizeof(array[0]);  // Size of the array
+
+  // Pass the array to the function
+  printArray(array, size);
+
+  return 0;
+}
+
+// Function definition
+void printArray(int array[], int size) {
+  // Print the elements of the array
+  for (int i = 0; i < size; i++) {
+    printf("%d ", array[i]);
+  }
+  printf("\n");
+}
