@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+// Function that converts feet to inches
+double convertFromFeetToInches(double feet) {
+  return feet * 12.0;
+}
+
+// Function that converts inches to centimeters
+double convertFromInchesToCentimeters(double inches) {
+  return inches * 2.54;
+}
+
+// Function that converts centimeters to meters
+double convertFromCentimetersToMeters(double centimeters) {
+  return centimeters / 100.0;
+}
+
+int main() {
+  double feet;  // Declare a variable to store the measurement in feet
+
+  // Prompt the user for a measurement in feet
+  printf("Enter a measurement in feet: ");
+  scanf("%lf", &feet);
+
+  // Convert the measurement to inches, then to centimeters, then to meters
+  double inches = convertFromFeetToInches(feet);
+  double centimeters = convertFromInchesToCentimeters(inches);
+  double meters = convertFromCentimetersToMeters(centimeters);
+
+  // Print the result
+  printf("%.2f feet is equal to %.2f meters.\n", feet, meters);
+
+  return 0;
+}
