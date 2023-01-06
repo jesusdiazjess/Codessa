@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+// Function declarations
+int marksGotInExams();
+float myPercentage(int marks1, int marks2);
+
+int main() {
+  int marks1, marks2;  // Variables to store the marks
+  float percentage;  // Variable to store the percentage
+
+  // Call the marksGotInExams function and store the returned values in the variables
+  marks1 = marksGotInExams();
+  marks2 = marksGotInExams();
+
+  // Calculate the percentage using the myPercentage function
+  percentage = myPercentage(marks1, marks2);
+
+  // Print the marks and percentage
+  printf("Marks in subject 1: %d\n", marks1);
+  printf("Marks in subject 2: %d\n", marks2);
+  printf("Percentage: %.2f%%\n", percentage);
+
+  return 0;
+}
+
+// Function definition: marksGotInExams
+int marksGotInExams() {
+  int marks;  // Variable to store the marks
+
+  // Ask the user for their marks
+  printf("Enter your marks in an exam: ");
+  scanf("%d", &marks);
+
+  // Return the marks
+  return marks;
+}
+
+// Function definition: myPercentage
+float myPercentage(int marks1, int marks2) {
+  int total_marks = 100;  // Total marks for both subjects
+  float percentage;  // Variable to store the percentage
+
+  // Calculate the percentage
+  percentage = (marks1 + marks2) / (float)total_marks * 100;
+
+  // Return the percentage
+  return percentage;
+}
