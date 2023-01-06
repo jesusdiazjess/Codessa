@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+  // Declare and initialize an array with 5 elements
+  int array[5] = {1, 2, 3, 4, 5};
+
+  // Print the elements of the array
+  printf("Elements of the array: ");
+  for (int i = 0; i < 5; i++) {
+    printf("%d ", array[i]);
+  }
+  printf("\n");
+
+  // Modify the elements of the array
+  for (int i = 0; i < 5; i++) {
+    array[i] *= 2;
+  }
+
+  // Print the modified elements of the array
+  printf("Modified elements of the array: ");
+  for (int i = 0; i < 5; i++) {
+    printf("%d ", array[i]);
+  }
+  printf("\n");
+
+  return 0;
+}
