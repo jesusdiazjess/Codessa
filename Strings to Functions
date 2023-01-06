@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+// Function that receives a string as an array of characters
+void printString(char* str) {
+  printf("String: %s\n", str);
+}
+
+int main() {
+  char str[] = "Hello";  // Declare a string as an array of characters
+
+  // Call the function and pass the string as an argument
+  printString(str);
+
+  return 0;
+}
