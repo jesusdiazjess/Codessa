@@ -1,2 +1,4 @@
 # Codessa
-Hello
+Codessa is a term that derives from the word "codes" in programming. It likely refers to a software application or system that is built using codes, or a group of codes that are used to perform a specific task.
+In programming, codes are written in a specific programming language, such as C, Java, or Python, and are used to instruct a computer to perform specific tasks. These tasks can include performing calculations, manipulating data, or interacting with users through a graphical user interface (GUI).
+Codessa may refer to a specific software application or system that is built using codes, or it may refer to a collection of codes that are used to perform a specific task or function. The term could also be used more broadly to refer to the use of codes in programming or computer science in general.
