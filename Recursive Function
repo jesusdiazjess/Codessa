@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+// Recursive function that calculates the factorial of a number
+int factorial(int n) {
+  if (n == 0) {  // Base case: 0! = 1
+    return 1;
+  } else {  // Recursive case: n! = n * (n - 1)!
+    return n * factorial(n - 1);
+  }
+}
+
+int main() {
+  int n = 5;  // Declare a number
+
+  // Call the function and print the result
+  printf("%d! = %d\n", n, factorial(n));
+
+  return 0;
+}
