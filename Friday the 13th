@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <time.h>
+
+int main()
+{
+    int year, month;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+    printf("Enter a month (1-12): ");
+    scanf("%d", &month);
+    struct tm date = {0};
+    date.tm_year = year - 1900;
+    date.tm_mon = month - 1;
+    date.tm_mday = 13;
+    mktime(&date);
+    if(date.tm_wday == 5)
+    {
+        printf("There is a Friday the 13th in %d/%d", month, year);
+    }
+    else
+    {
+        printf("There is no Friday the 13th in %d/%d", month, year);
+    }
+    return 0
+
+}
